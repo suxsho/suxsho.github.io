@@ -1,0 +1,1 @@
+$(function(){var i=$(window).height()-$("nav").outerHeight();$("#intro").css("height",i+"px"),$("#intro").happyLine(),$(window).on("resize",function(){var i=$(window).height()-$("nav").outerHeight();$("#intro").css("height",i+"px")}),$(".my-carousel").slick({infinite:!0,autoplay:!0,arrows:!1,autoplaySpeed:2e3})});

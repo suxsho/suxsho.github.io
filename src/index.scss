@@ -1,0 +1,388 @@
+$fa-font-path:"../font-awesome/fonts";
+@import '../font-awesome/scss/font-awesome.scss';
+
+$mobile : "screen and (max-width: 768px)";
+$tablet : "screen and (max-width: 999px) and (min-width: 769px)";
+$pc     : "screen and (min-width: 1000px)";
+
+* {
+    box-sizing: border-box;
+}
+
+// @media #{$mobile}{
+//     body {
+//         background-color: pink;
+//     }
+// }
+// @media #{$tablet}{
+//     body {
+//         background-color: grey;
+//     }
+// }
+
+// @media #{$pc}{
+//     body {
+//         background-color: red;
+//     }
+// }
+
+html, body {
+    font-size: 10px;
+    font-family: tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+}
+
+.clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+        zoom: 1;
+        visibility: hidden;
+        background: transparent;
+    }
+}
+
+nav.navi-bar {
+    padding: 20px 50px;
+    background: #fdfdfd;
+    overflow: hidden;
+
+    @media #{$mobile}{
+        padding: 20px 20px;
+    }
+
+    div.left-items {
+        position: relative;
+        float: left;
+    }
+    div.right-items {
+        float: right;
+    }
+
+    img.logo {
+        display: block;
+        height: 40px;
+        transition: all 1.5s;
+
+        @media #{$mobile}{
+            height: 28px;
+        }
+
+        &:hover {
+            // transform: rotateY(360deg);
+        }
+    }
+
+    img.laoguo-nv {
+        display: block;
+        width: 30px;
+        position: absolute;
+        right: -50px;
+        bottom: 0px;
+        transform: rotateY(180deg);
+        
+        animation: duang 1s infinite, gogogo linear 100s infinite;
+
+        @keyframes duang {
+            50% {
+                bottom: 2px;
+            }
+        }
+        @keyframes gogogo {
+            50% {
+                right: -900px;
+                transform: rotateY(180deg);
+            }
+            51% {
+                transform: rotateY(0deg);
+            }
+            99% {
+                transform: rotateY(0deg);
+            }
+        }
+    }
+
+    ul.i18n {
+        list-style: none;
+        padding: 0px;
+        margin: 10px 0;
+
+        li {
+            float: left;
+            padding: 0 10px;
+            border-right: 2px solid #666666;
+
+            &:last-child {
+                 border-right: 2px solid transparent;
+            }
+
+            a {
+                text-decoration: none;
+                font-size: 14px;
+                color: #666666;
+            }
+        }
+    }
+
+}
+
+#intro {
+    position: relative;
+    background-color: #EEEEEE;
+    overflow: hidden;
+
+    div.intro-wrapper {
+        position: absolute;
+        top:0;
+        width: 100%;
+        margin-top: 10%;
+
+        p {
+            color: #444444;
+            text-align: center;
+        }
+        p.title {
+           font-size: 4rem;
+           margin: 40px;
+
+           @media #{$mobile}{
+                font-size: 3rem;
+            }
+        }
+        p.sub-title {
+            color: #444444;
+            font-size: 18px;
+            max-width: 750px;
+            margin: 0px auto;
+            margin-top: 70px;
+            line-height: 1.5;
+            padding: 0 20px;
+        }
+    }
+
+    div.intro-footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        width: 100%;
+
+        div.laoguo {
+            margin: 0 auto;
+            height: 40px;
+            width: 40px;
+            background-image: url("../static/img/laoguo_r.png");
+            background-size: 160px 100%;
+            background-position: 0px 0px;
+            overflow: hidden;
+            animation: laoguo-running 1s steps(4) infinite;
+
+            @keyframes laoguo-running {
+                0% {
+                    background-position-x: 0px;
+                }
+                100% {
+                    background-position-x: 160px;
+                }
+            }
+        }
+
+        div.intro-arrow {
+            position: relative;
+            margin: 0 auto;
+            height: 40px;
+            width: 40px;
+            animation: pikapika 1s infinite;
+
+            &:before, &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 18px;
+                bottom: 15px;
+                width: 4px;
+                height: 15px;
+                background-color: #7d7d7d;
+                transform-origin: 2px 13px;
+            }
+            &:before {
+                transform: rotate(-45deg);
+            }
+            &:after {
+                transform: rotate(45deg);
+            }
+
+            @keyframes pikapika {
+                0%, 100% {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+                50% {
+                    opacity: 0.5;
+                    transform: translateY(5px);
+                }
+            }
+        }
+    }
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    border-bottom: 1px solid #eee;
+}
+
+.game-intro {
+    padding: 60px 0;
+
+    .game-intro-title {
+        border-left: 2px solid #666666;
+        padding-left: 10px;
+        margin: 0px 0 40px 10px;
+
+        .title {
+            font-size: 16px;
+            color: #333333;
+        }
+    }
+}
+
+.my-carousel-panel {    
+    width: 50%;
+    overflow: hidden;
+    float: left;
+
+    @media #{$mobile} {
+        width: 100%;
+        float: right;
+    }
+
+    .my-carousel {
+        margin: 0 auto;
+        max-width: 320px;
+        max-height: 240px;
+        width: 100%;
+
+        .carousel-content-item {
+            width: 100%;
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}
+
+.game-detail {
+    width: 50%;
+    text-align: center;
+    float: left;
+
+    @media #{$mobile} {
+        width: 100%;
+    }
+
+    img.game-logo {
+        margin: 0 auto;
+        display: block;
+        height: 100px;
+    width: 800px;
+    margin: 0 auto;
+        width: 100px;
+        border-radius: 50px;
+    }
+
+    p.game-desc {
+        padding: 0;
+        margin: 0;
+        margin-top: 20px;
+        color: #333333;
+        font-size: 16px;
+        font-weight: 300;
+    }
+	
+	    p.introduce {
+        padding: 0;
+        margin: 0;
+        margin-top: 20px;
+        color: #333333;
+        font-size: 16px;
+        font-weight: 1000;
+    }
+
+    p.download {
+        padding: 0;
+        margin: 0;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        line-height: 25px;
+
+        a.game-link {
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 200;
+            color: #ffffff;
+            background: #8d8d8d;
+            border: 0;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+    }
+}
+
+.footer {
+    
+    padding-top: 10px;
+    padding-bottom: 40px;
+
+    .footer-panel {
+        float: left;
+        width: 50%;
+        padding: 0px 20px;
+
+        @media #{$mobile} {
+            width: 100%;
+        }
+
+    }
+    h3 {
+        color: #404040;
+
+        &.right {
+            text-align: right;
+
+            @media #{$mobile} {  
+                text-align: left;
+            }
+        }
+    }
+    ul.follow-link {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 20px;
+
+            a {
+                font-size: 13px;
+                color: #666666;
+                text-decoration: none;
+            }
+        }
+    }
+    p.rights {
+        padding: 0;
+        margin: 0;
+        font-size: 13px;
+        color: #666666;
+        text-align: right;
+
+        @media #{$mobile} {  
+            text-align: left;
+        }
+    }
+}
+

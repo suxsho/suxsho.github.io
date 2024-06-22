@@ -1,0 +1,84 @@
+var gulp = require('gulp');
+var gutil = require('gulp-util');
+var uglify = require('gulp-uglify');
+var cssmin = require("gulp-cssmin");
+var rename = require("gulp-rename");
+var concat = require('gulp-concat');
+var clean = require('gulp-clean');
+var sass = require('gulp-sass');
+var runSequence = require('run-sequence');
+var plumber = require('gulp-plumber');
+
+gulp.task('default', function(cb) {
+    runSequence('clean-build',['vendor-js', 'build-js', 'vendor-css', 'build-copy', 'build-sass'], cb);
+});
+
+gulp.task('dev', function(cb) {
+    runSequence('clean-build',['vendor-js', 'build-js', 'vendor-css', 'build-copy', 'build-sass'], 'watch', cb);
+});
+
+gulp.task('clean-build', function () {
+    // clean built css & js
+    // clean built html
+    return gulp.src([
+                'build/'
+            ], {read: false})
+            .pipe(clean());
+});
+
+gulp.task('vendor-js', function () {
+    return gulp.src([
+                'node_modules/jquery/dist/jquery.js',
+                'node_modules/slick-carousel/slick/slick.js',
+                'node_modules/three/build/three.js',
+                'node_modules/three/examples/js/renderers/Projector.js',
+                'node_modules/three/examples/js/renderers/CanvasRenderer.js'
+            ])
+            .pipe(uglify({
+                preserveComments: 'license'
+            }))
+            .pipe(concat('vendor.min.js'))
+            .pipe(gulp.dest('build/'));
+
+});
+
+gulp.task('build-js', function () {
+    return gulp.src(
+                'src/**/*.js'
+            )
+            .pipe(uglify())
+            .pipe(gulp.dest('build/'));
+
+});
+
+gulp.task('vendor-css', function () {
+    return gulp.src([
+                'node_modules/normalize.css/normalize.css',
+                'node_modules/slick-carousel/slick/slick.css',
+                'node_modules/slick-carousel/slick/slick-theme.css'
+            ])
+            .pipe(cssmin())
+            .pipe(concat('vendor.min.css'))
+            .pipe(gulp.dest('build/'));
+
+});
+
+gulp.task('build-sass', function () {
+  return gulp.src('src/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('build/'));
+});
+
+gulp.task('build-copy', function () {
+    return gulp.src([
+                'node_modules/slick-carousel/slick/**/*.*',
+                '!node_modules/slick-carousel/slick/+(*.js|*.*ss|config.rb)'
+            ])
+            .pipe(gulp.dest('build/'));
+});
+
+gulp.task('watch', function() {
+    gulp.watch('src/**/*.js', ['build-js']);
+    gulp.watch('src/**/*.scss', ['build-sass']);
+    gulp.watch('template/**/*.*', ['build-template']);
+});

@@ -1,0 +1,153 @@
+.navbar-header .navbar-brand img {
+	margin-top: -10px;
+}
+.navbar.navbar-inverse.navbar-fixed-top .container #navbar {
+	margin-top: 10px;
+}
+
+.jumbotron .container #txtL {
+	width: 500px;
+	height: 50px;
+	float: left;
+}
+.jumbotron .container #txtR {
+	float: left;
+	margin-left: 30px;
+	margin-top: 50px;
+}
+#elfy{
+	margin-bottom: 0px;
+}
+#yzrpg {
+	background-color: #333333;
+	margin-bottom: 0px;
+}
+#yzrpg .container #txtR {
+	float: left;
+	margin-left: 30px;
+	margin-top: 50px;
+	color: #FFFFFF;
+}
+#hf {
+	background-color: #51BBFF;
+	margin-bottom: 0px;
+}
+#top {
+	background-color: #FFFFFF;
+	height: 40px;
+}
+#top .container #txtL {
+	width: auto;
+	float: left;
+	margin-bottom: 0px;
+}
+#top .container #txtR {
+	margin-top: 0px;
+}
+#btn {
+	background-color: #27ae60;
+	margin-bottom: 0px;
+}
+#btn .container #txtL {
+	width: 400px;
+	color: #FFFFFF;
+	margin-right: 100px;
+}
+#btn .container #txtM {
+	margin-top: 0px;
+	color: #FFFFFF;
+	float: left;
+	left: 20px;
+	width: auto;
+	margin-right: 100px;
+}
+#btn .container #txtR {
+	color: #FFFFFF;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+.body{
+	font-family: "微软雅黑", "宋体";
+	
+	}
+h3 {
+	font-family: "微软雅黑", "宋体";
+}
+h5 {
+	font-family: "微软雅黑", "宋体";
+}
+h1 {
+	font-family: "微软雅黑", "宋体";
+}
+p {
+	font-family: "微软雅黑", "宋体";
+}
+    a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+a:hover {
+	text-decoration: underline;
+	color: #FFFFFF;
+}
+a:active {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#about1{
+	margin-bottom: 0px;
+	background-image: url(../images/abt1.jpg);
+	color: #FFF;
+	text-shadow: 1px 1px 2px #000;
+}
+#about2{
+	margin-bottom: 0px;
+	background-image: url(../images/abt2.jpg);
+	color: #FFFFFF;
+	text-shadow: 1px 1px 2px #000000;
+}
+#about3{
+	margin-bottom: 0px;
+	background-image: url(../images/abt3.jpg);
+	color: #FFFFFF;
+	text-shadow: 1px 1px 2px #000000;
+}
+#about4{
+	margin-bottom: 0px;
+	background-image: url(../images/abt4.jpg);
+	color: #FFFFFF;
+	text-shadow: 1px 1px 2px #000000;
+}
+
+#about5{
+	margin-bottom: 0px;
+	margin-top: 0px;
+	color: #FFFFFF;
+	background-color: #000000;
+	height: 40px;
+	padding-top: 5px;
+	padding-bottom: 0px;
+}
+
+#abtR {
+	float: right;
+	color: #FFFFFF;
+}
+
+
+
+@media screen{
+.navbar.navbar-inverse.navbar-fixed-top {
+	background-color: #FFFFFF;
+	height: 73px;
+	border-bottom-color: #FFFFFF;
+	border-bottom-style: none;
+}
+
+}

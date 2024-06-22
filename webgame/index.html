@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Terobi制作组是一个以制作新意的游戏为理念的团队，我们一直在努力创作新鲜有趣的游戏。">
+<meta name="keywords" content="terobi,terobigames,变装战机，勇者要生活，独立游戏，原创游戏，国内游戏组">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Terobi大冒险</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href="css/tp.css" rel="stylesheet" type="text/css" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+		<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?9ec6bfaacae4037d361084163f898a78";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+  </head>
+  <body>
+  
+   <!-- START -->
+       <div class="jumbotron" id = "top">
+      <div class="container">
+<div id = "txtL">
+  <img src="images/terobi.png" alt="" width="204" height="54"/> </div>
+  <div id = "txtR">
+  <P>Terobi大冒险：你被困在这个网页里了，需要通过99关才可以逃出去</P>
+   <p><a class="btn btn-primary btn-lg" href="http://terobi.com/webgame/terobidmx2/" target="_blank" role="button">前往Terobi大冒险2 &raquo;</a>
+  </div>
+      </div>
+    </div>
+    
+    <div class="jumbotron" id = "elfy">
+      <div class="container">
+	  
+		<div id = "txtL">
+		  <h1>战斗</h1> 
+		  <P>游戏的目标就是通过更高的关卡，你能通过99关吗</P>
+		  <p id = "str">s</p>
+		</div>	  
+	  
+	    <div id = "txtR">
+		<p id = "stage">stage</p>
+		<a class="btn btn-primary btn-lg" role="button" onClick = "bat()">挑战</a></p>
+		<p id = "batover"></p> 
+		</div>
+	  
+      </div>
+    </div>
+	
+	<div class="jumbotron" id = "elfy">
+      <div class="container">
+	  
+		<div id = "txtL">
+		  <h1>淘金</h1> 
+		  <p>钱不够的时候可以通过这里获得金币</p> 
+		  <p id = "money">m</p> 
+		</div>	  
+	  
+	    <div id = "txtR">
+		<a class="btn btn-primary btn-lg" role="button" onClick = "getMoney()">淘金</a></p>
+		<p id = "gmm"></p>
+		</div>
+	  
+      </div>
+    </div>
+    
+	<div class="jumbotron" id = "elfy">
+      <div class="container">
+	  
+		<div id = "txtL">
+		  <h1>开宝箱</h1> 
+		  <p>可随机抽出宝石，用于升级</p>
+		</div>	  
+	  
+	    <div id = "txtR">
+		<a class="btn btn-primary btn-lg" role="button" onClick = "getBox()">100金开1次</a></p>
+		<p id = "bxo"></p>
+
+		</div>
+	  
+      </div>
+    </div>	
+	
+	<div class="jumbotron" id = "elfy">
+      <div class="container">
+	  
+		<div id = "txtL">
+		  <h1>升级</h1> 
+		  <p>升级后可提升战斗力，越下面的武器增加战斗力越多</p>
+		  <P id = "m2">需求</p>
+		  <P id = "baoshi">需求</p>
+		</div>	  
+	  
+	    <div id = "txtR">
+		<P id = "w1">剑：</p>
+		<a class="btn btn-primary btn-lg" role="button" onClick = "lv1()">升级</a> 
+		<P id = "x1m">金币</p>
+		<P id = "w1m">需求</p>
+		<P id = "w2">剑：</p>
+		<a class="btn btn-primary btn-lg" role="button" onClick = "lv2()">升级</a> 
+		<P id = "x2m">金币</p>
+		<P id = "w2m">需求</p>
+		<P id = "w3">剑：</p>
+		<a class="btn btn-primary btn-lg" role="button" onClick = "lv3()">升级</a> 
+		<P id = "x3m">金币</p>
+		<P id = "w3m">需求</p>
+		<P id = "w4">剑：</p>
+		<a class="btn btn-primary btn-lg" role="button" onClick = "lv4()">升级</a> 
+		<P id = "x4m">金币</p>
+		<P id = "w4m">需求</p>
+		<P id = "w5">剑：</p>
+		<a class="btn btn-primary btn-lg" role="button" onClick = "lv5()">升级</a> 
+		<P id = "x5m">金币</p>
+		<P id = "w5m">需求</p>
+		<P id = "w6">剑：</p>
+		<a class="btn btn-primary btn-lg" role="button" onClick = "lv6()">升级</a>
+		<P id = "x6m">金币</p>
+		<P id = "w6m">需求</p>
+		</div>
+	  
+      </div>
+    </div>
+	
+		<div class="jumbotron" id = "elfy">
+      <div class="container">
+	  
+		<div id = "txtL">
+		  <h3>游戏说明</h3> 
+		</div>	  
+	  
+	    <div id = "txtR">
+			<p>恭喜你发现了这个神秘页面</p>
+			 <p>目前游戏目标关卡是通过99关</p>
+		</div>
+	  
+      </div>
+    </div>
+    
+  <!-- END -->
+  
+  <script src="js/game.js"  charset="gbk"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
