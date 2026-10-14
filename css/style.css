@@ -11531,6 +11531,8 @@ html:not(.lt-ie10) .not-animated {
 .rd-navbar-fullwidth .rd-navbar-main-item {
 	flex-grow: 0;
 	flex-shrink: 0;
+	margin-left: 8px;
+	margin-right: 8px;
 }
 
 .rd-navbar-fullwidth .rd-navbar-aside-outer {
@@ -18429,4 +18431,44 @@ yx-axis
 
 .mCS-dark.mCSB_scrollTools .mCSB_buttonRight {
 	background-position: -80px -56px;
+}
+
+/*
+* Game cards
+*/
+.game-section {
+	background: #fff;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.game-section h2,
+.game-section h3,
+.game-section p {
+	color: #151515;
+}
+
+.game-card {
+	border: 1px solid #e5e5e5;
+	border-radius: 6px;
+	background: #fff;
+	overflow: hidden;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+	height: 100%;
+}
+
+.game-card:hover {
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+	transform: translateY(-4px);
+}
+
+.game-card img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.game-card__body {
+	padding: 25px;
 }
