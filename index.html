@@ -11,7 +11,7 @@
     <!-- Stylesheets-->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css?v=5">
+    <link rel="stylesheet" href="css/style.css?v=9">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
   <body>
@@ -91,7 +91,7 @@
                 <div class="swiper-slide-caption">
                   <div class="container">
                     <h1 data-caption-animate="fadeInUpSmall" data-i18n="slide.stg1.title">变装战机</h1>
-                    <p class="big" style="max-width: 520px" data-caption-animate="fadeInRightSmall" data-caption-delay="300" data-i18n="slide.stg1.desc">已经是黑历史了…………</p><a class="button button-primary" href="https://www.taptap.com/app/60871" data-caption-animate="fadeInRightSmall" data-caption-delay="550">TAPTAP</a>
+                    <p class="big" style="max-width: 520px" data-caption-animate="fadeInRightSmall" data-caption-delay="300" data-i18n="slide.stg1.desc">已经是黑历史了…………</p><a class="button button-primary js-play-online" href="#" data-caption-animate="fadeInRightSmall" data-caption-delay="550" data-i18n="play.online">在线游戏</a>
                   </div>
                 </div>
               </div>
@@ -150,7 +150,7 @@
                 <div class="game-card__body">
                   <h3 class="heading-4" data-i18n="slide.stg1.title">变装战机</h3>
                   <p data-i18n="slide.stg1.desc">已经是黑历史了…………</p>
-                  <a class="button button-primary" href="https://www.taptap.com/app/60871" target="_blank">TapTap</a>
+                  <a class="button button-primary js-play-online" href="#" data-i18n="play.online">在线游戏</a>
                 </div>
               </div>
             </div>
@@ -184,9 +184,56 @@
     </div>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
+    <!-- 在线游戏弹窗-->
+    <div class="game-modal" id="game-modal" hidden>
+      <div class="game-modal__backdrop"></div>
+      <div class="game-modal__card">
+        <div class="game-modal__actions">
+          <button class="game-modal__btn js-game-fullscreen" id="game-fullscreen" type="button" aria-label="Fullscreen">&#x26F6;</button>
+          <button class="game-modal__btn js-game-modal-close" type="button" aria-label="Close">&times;</button>
+        </div>
+        <iframe class="game-modal__frame" id="game-modal-frame" src="about:blank" scrolling="no" allowfullscreen></iframe>
+      </div>
+    </div>
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js?v=2"></script>
     <script src="js/i18n.js?v=2"></script>
+    <script>
+      (function () {
+        var GAME_URL = 'https://hf.terobi.com/';
+        var modal = document.getElementById('game-modal');
+        var frame = document.getElementById('game-modal-frame');
+        var card = modal.querySelector('.game-modal__card');
+        var fsBtn = document.getElementById('game-fullscreen');
+        function open(e) {
+          e.preventDefault();
+          frame.src = GAME_URL;
+          modal.hidden = false;
+          document.body.style.overflow = 'hidden';
+        }
+        function close() {
+          if (document.fullscreenElement) document.exitFullscreen();
+          modal.hidden = true;
+          frame.src = 'about:blank';
+          document.body.style.overflow = '';
+        }
+        function toggleFullscreen() {
+          if (document.fullscreenElement) {
+            document.exitFullscreen();
+          } else if (card.requestFullscreen) {
+            card.requestFullscreen();
+          }
+        }
+        var links = document.querySelectorAll('.js-play-online');
+        for (var i = 0; i < links.length; i++) links[i].addEventListener('click', open);
+        var closers = document.querySelectorAll('.js-game-modal-close');
+        for (var j = 0; j < closers.length; j++) closers[j].addEventListener('click', close);
+        fsBtn.addEventListener('click', toggleFullscreen);
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && !modal.hidden && !document.fullscreenElement) close();
+        });
+      })();
+    </script>
   </body>
 </html>

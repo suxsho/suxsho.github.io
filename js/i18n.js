@@ -18,6 +18,8 @@
 		'slide.stg1.title': ['变装战机', 'Hanger Fighter'],
 		'slide.stg1.desc': ['已经是黑历史了…………', 'Our early game — a bit embarrassing now'],
 		'games.title': ['游戏列表', 'Game List'],
+		'play.online': ['在线游戏', 'Play Online'],
+		'play.close': ['关闭', 'Close'],
 		'footer.follow': ['关注我们', 'Follow Us'],
 		'about.h1': ['做热爱的游戏顺带挣钱', 'Making games we love — and earning along the way'],
 		'about.p1': ['热衷于创造独特的、且团队喜欢的游戏类型，希望做出能让团队自身也玩的很开心的新奇作品', 'We are passionate about creating unique games that the whole team loves, hoping to make novel works that we ourselves enjoy playing.'],
