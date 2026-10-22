@@ -1,0 +1,8 @@
+{
+    "ChineseSimplified": "play 游戏已支持外接键盘、鼠标、手柄游玩，目前已是最终完整版，如果发现有BUG可以通过邮件 suxsho@qq.com 向我反馈",
+    "ChineseTraditional": "play  遊戲已支援外接鍵盤、滑鼠、手把遊玩，目前已是最終完整版，如果發現BUG可透過郵件 suxsho@qq.com 向我回報",
+
+第 3 行
+    "English": "play  The game now supports external keyboard, mouse, and gamepad. This is the final, complete version. If you find any bugs, please report them via email: suxsho@qq.com",
+    "Japanese": "play  外部キーボード・マウス・ゲームパッドでのプレイに対応しました。現在は最終完全版です。バグを見つけた場合は suxsho@qq.com までメールでご報告ください"
+}
