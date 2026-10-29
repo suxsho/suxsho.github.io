@@ -1,5 +1,5 @@
 {
-    "ChineseSimplified": "新版本已上线Taptap，做了很多优化，游戏已支持外接键盘、鼠标、手柄游玩，目前已是最终完整版，如果发现有BUG可以通过邮件 suxsho@qq.com 向我反馈",
+    "ChineseSimplified": "新版本已上线Taptap，做了很多优化，游戏已支持外接键盘、鼠标、手柄游玩，目前已是最终完整版，如果发现有BUG可以通过邮件 suxsho@qq.com 向我反馈，游戏是单机游戏，联网时会自动同步云存档，如果使用多设备玩最好切换设备前先在游戏设置里注销，否则可能出现回档情况",
     "ChineseTraditional": "遊戲已支援外接鍵盤、滑鼠、手把遊玩，目前已是最終完整版，如果發現BUG可透過郵件 suxsho@qq.com 向我回報",
 
     "English": "The game now supports external keyboard, mouse, and gamepad. This is the final, complete version. If you find any bugs, please report them via email: suxsho@qq.com",
