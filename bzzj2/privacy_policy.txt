@@ -40,7 +40,8 @@
 - 网络访问（INTERNET / ACCESS_NETWORK_STATE / ACCESS_WIFI_STATE）：用于游戏联网、公告拉取、云存档与广告服务。
 - 大致位置（ACCESS_COARSE_LOCATION）：仅用于广告地域定向。只有在您点击"观看广告"并在广告确认窗点"同意"之后才申请，可拒绝，拒绝后广告仍可播放与领奖。
 - 电话状态（READ_PHONE_STATE）：仅用于广告反作弊，不读取通话内容、通话记录与通讯录，不拨打电话。申请时机同上，可拒绝，拒绝不影响游戏功能。
-- 系统级普通权限（安装时自动授予、不弹窗）：广告标识（AD_ID）、广告服务、应用列表查询（QUERY_ALL_PACKAGES）、安装包安装（REQUEST_INSTALL_PACKAGES）、OAID 厂商标识服务（MSA）、前台服务与唤醒。
+- 系统级普通权限（安装时自动授予、不弹窗）：广告标识（AD_ID）、广告服务、安装包安装（REQUEST_INSTALL_PACKAGES）、OAID 厂商标识服务（MSA）、前台服务与唤醒。
+- 本游戏不申请 QUERY_ALL_PACKAGES，不会读取您的应用安装列表。
 本游戏不申请存储、精确位置（ACCESS_FINE_LOCATION）、相机、麦克风、通讯录、短信等其他权限。关闭位置或电话权限后，本地游戏功能不受影响。
 
 四、第三方 SDK 共享情况

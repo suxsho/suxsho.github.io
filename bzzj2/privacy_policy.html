@@ -64,7 +64,7 @@
 <ol>
 <li><strong>账号登录。</strong>本游戏通过 TapTap 账号体系登录，不要求您单独注册：经您授权后，TapTap SDK 会返回您的 TapTap 账号唯一标识（open_id/union_id）、昵称与头像；同时本游戏使用本机设备标识符（Android ID）生成玩家唯一标识，用于存档与防作弊。我们收集上述信息是为了帮助您完成登录、保存游戏进度并保护账号安全。如您不提供这类信息，您将无法使用登录、云存档与排行榜功能，但仍可在本地进行基础游戏。</li>
 <li><strong>游戏服务。</strong>当您使用游戏服务时，我们会收集您使用的设备标识符（Android ID）、设备型号、操作系统版本、网络类型、设备传感器信息（由 Unity 引擎读取，用于屏幕方向识别与输入适配），以及游戏内进度数据（关卡进度、金币、等级、成就、星星数等）。我们收集上述信息是为了保障您正常使用我们的服务、保存与同步游戏存档、维护游戏基础功能的正常运行。</li>
-<li><strong>广告服务。</strong>本游戏包含激励视频等广告内容。当您主动点击"观看广告"时，广告 SDK（TapADN）会收集设备标识符（Android ID、OAID、GAID）、IP 地址、设备传感器信息、应用安装列表、广告交互记录（展示、点击、完成）与网络类型，用于广告投放、频控与反作弊；如您另行授权，还会使用大致位置（不申请精确位置）与电话状态信息用于地域定向与反作弊。如您不提供这类信息，您将无法通过观看广告获得游戏奖励，但不影响游戏本身功能。</li>
+<li><strong>广告服务。</strong>本游戏包含激励视频等广告内容。当您主动点击"观看广告"时，广告 SDK（TapADN）会收集设备标识符（Android ID、OAID、GAID）、IP 地址、设备传感器信息、广告交互记录（展示、点击、完成）与网络类型，用于广告投放、频控与反作弊；如您另行授权，还会使用大致位置（不申请精确位置）与电话状态信息用于地域定向与反作弊。如您不提供这类信息，您将无法通过观看广告获得游戏奖励，但不影响游戏本身功能。</li>
 <li><strong>保障网络和服务的安全。</strong>为了保障网络和游戏服务的安全性，我们会收集您的设备识别符、IP 地址、访问日期和时间。我们收集上述信息以营造公平、健康及安全的游戏环境，打击破坏游戏公平环境的行为（如防止作弊、防刷榜等）。</li>
 <li><strong>问题反馈。</strong>本游戏的问题反馈通过您设备自带的邮件客户端或 TapTap 游戏社区页面进行：使用"邮件反馈"时，我们会将游戏 UID 与昵称预填进邮件正文，由您通过自己的邮件应用主动发送；"反馈问题"仅打开 TapTap 社区网页。两类反馈均仅在您主动操作时发生，不通过任何第三方 SDK 采集或传输数据。</li>
 </ol>
@@ -78,7 +78,6 @@
   <tr><td>大致位置（ACCESS_COARSE_LOCATION）</td><td>广告 SDK 用于广告地域定向</td><td>是（仅在您点击"观看广告"并在广告确认窗点"同意"后弹出系统授权框）</td><td>可随时在系统设置中关闭，拒绝后广告仍可播放与领奖</td></tr>
   <tr><td>电话状态（READ_PHONE_STATE）</td><td>广告 SDK 用于反作弊（识别异常设备）；不读取通话内容、通话记录与通讯录，不拨打电话</td><td>是（申请时机同上）</td><td>可随时在系统设置中关闭，拒绝不影响游戏功能</td></tr>
   <tr><td>广告标识符（AD_ID）、广告服务（ACCESS_ADSERVICES_ATTRIBUTION / TOPICS）</td><td>广告 SDK 用于广告投放、归因与反作弊</td><td>否（系统级普通权限，同意且触发广告后才使用）</td><td>卸载本游戏或撤回同意后停止</td></tr>
-  <tr><td>应用列表查询（QUERY_ALL_PACKAGES）</td><td>广告 SDK 判断已安装应用，用于投放与反作弊</td><td>否（系统级普通权限）</td><td>同上</td></tr>
   <tr><td>安装包安装（REQUEST_INSTALL_PACKAGES）</td><td>广告落地页下载安装应用（需您再次确认）</td><td>否（系统级普通权限）</td><td>同上</td></tr>
   <tr><td>设备标识服务（MSA / OAID 厂商权限）</td><td>获取匿名广告标识（OAID）</td><td>否（系统级普通权限）</td><td>同上</td></tr>
   <tr><td>前台服务、唤醒锁、开机广播（FOREGROUND_SERVICE / WAKE_LOCK / RECEIVE_BOOT_COMPLETED）</td><td>广告 SDK 后台任务调度与上报</td><td>否（系统级普通权限）</td><td>同上</td></tr>
@@ -121,7 +120,7 @@
   <tr><th>SDK名称</th><th>开发者名称</th><th>使用目的/场景</th><th>收集的个人信息类型及方式</th><th>隐私政策链接</th></tr>
   <tr><td>Unity 引擎框架</td><td>Unity Technologies ApS</td><td>游戏运行与渲染，同意后启动并贯穿运行全程</td><td>设备标识符（Android ID）、设备型号、系统版本、网络类型、设备传感器信息（加速度计、陀螺仪等，用于屏幕方向与输入适配）；引擎自动读取</td><td><a href="https://unity.com/cn/legal/privacy-policy" target="_blank">unity.com/cn/legal/privacy-policy</a></td></tr>
   <tr><td>TapTap 开发者服务 SDK（TapSDK）</td><td>心动网络股份有限公司</td><td>TapTap 账号登录、云存档、排行榜、成就（TapTap 渠道包）</td><td>TapTap 账号 open_id/union_id、昵称、头像、设备标识符（Android ID）、设备与网络信息；SDK 自动采集</td><td><a href="https://developer.taptap.cn/docs/sdk/compliance/privacy/" target="_blank">developer.taptap.cn（TapSDK 合规页）</a></td></tr>
-  <tr><td>TapADN（Dirichlet）广告 SDK</td><td>心动网络股份有限公司</td><td>激励视频广告加载、展示与奖励发放（用户主动点击看广告时）</td><td>设备标识符（Android ID、OAID、GAID）、IP 地址、设备传感器信息、应用安装列表、广告交互记录、网络类型；经您授权后另含大致位置（ACCESS_COARSE_LOCATION）与电话状态（READ_PHONE_STATE，仅用于反作弊）；SDK 自动采集</td><td><a href="https://ssp.dirichlet.cn/" target="_blank">ssp.dirichlet.cn</a></td></tr>
+  <tr><td>TapADN（Dirichlet）广告 SDK</td><td>心动网络股份有限公司</td><td>激励视频广告加载、展示与奖励发放（用户主动点击看广告时）</td><td>设备标识符（Android ID、OAID、GAID）、IP 地址、设备传感器信息、广告交互记录、网络类型；经您授权后另含大致位置（ACCESS_COARSE_LOCATION）与电话状态（READ_PHONE_STATE，仅用于反作弊）；不读取应用安装列表；SDK 自动采集</td><td><a href="https://ssp.dirichlet.cn/" target="_blank">ssp.dirichlet.cn</a></td></tr>
   <tr><td>Unity Ads SDK</td><td>Unity Technologies ApS</td><td>广告备用通道（本版本未启用，SDK 启动自动初始化入口已移除）</td><td>设备标识符（GAID）、IP 地址、广告交互记录（如启用）</td><td><a href="https://unity.com/cn/legal/privacy-policy" target="_blank">unity.com/cn/legal/privacy-policy</a></td></tr>
 </table>
 
