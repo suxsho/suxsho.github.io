@@ -33,27 +33,7 @@
 频次时机：用户同意隐私政策且首次点击看广告时初始化
 
 ──────────────────────────────
-4. Google Play Games Services SDK
-开发者全称：Google LLC
-使用目的：Google 账号登录、成就系统、排行榜（Google Play 渠道包）
-使用场景：用户启动 Google 渠道包登录、达成成就、上传排行分数时
-调用权限：网络访问
-收集个人信息类型及方式：Google 账号 Player ID、昵称、头像、游戏成就与分数数据；SDK 自动采集
-隐私政策链接：https://policies.google.com/privacy?hl=zh-CN
-频次时机：用户同意隐私政策后初始化一次；登录/成就上报时按需调用
-
-──────────────────────────────
-5. Google Mobile Ads（AdMob）SDK
-开发者全称：Google LLC
-使用目的：激励视频与插页广告投放（Google Play 渠道包）
-使用场景：广告加载与展示时
-调用权限：网络访问
-收集个人信息类型及方式：广告标识符（Admob/AAID）、设备信息、广告交互记录；SDK 自动采集
-隐私政策链接：https://policies.google.com/privacy?hl=zh-CN
-频次时机：用户同意隐私政策后初始化一次；每次广告请求时上报
-
-──────────────────────────────
-6. Unity Ads SDK（com.unity.ads 包）
+4. Unity Ads SDK（com.unity.ads 包）
 开发者全称：Unity Technologies ApS
 使用目的：广告备用通道（当前版本未调用其初始化接口，实际未启用采集）
 使用场景：仅在广告展示流程中按需使用
@@ -65,4 +45,4 @@
 ──────────────────────────────
 共享与披露说明：
 - 除上述 SDK 外，本游戏不接入其他具有收集个人信息能力的第三方代码或服务。
-- 渠道区分：TapTap 渠道包已禁用第 4、5 项（Google Play Games、AdMob）的依赖注入，其 APK 中不包含 play-services 原生库，这两项仅随 Google Play 渠道包分发。
+- 本目录仅适用于 TapTap 渠道版本；Google Play 渠道版本的 SDK 披露见 privacy_policy_google.html。
